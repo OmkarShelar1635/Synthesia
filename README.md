@@ -43,17 +43,24 @@ The project is built using a modern MERN-style architecture with a React (Vite) 
 Synthesia/
 │
 ├── Backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ ├── config/
-│ └── server.js
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   ├── server.js
+│   ├── package.json
+│   └── .env
 │
 ├── Frontend/
-│ ├── src/
-│ ├── public/
-│ └── vite.config.js
+│   ├── src/
+│   ├── public/
+│   ├── vite.config.js
+│   ├── package.json
+│   └── .env
+│
+└── README.md
+
 
 
 ---
@@ -62,16 +69,14 @@ Synthesia/
 
 This project uses **two `.env` files** (not pushed to GitHub):
 
-### Backend `.env`
-
+Backend/.env
 JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
-MONGO_URI=YOUR_MongoDB_URL
+MONGO_URI=YOUR_MONGODB_URL
 JWT_SECRET=YOUR_JWT_SECRET
 
+Frontend/.env
+VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
 
-### Frontend `.env`
-
-VITE_JAMENDO_CLIENT_ID=Your_CLIENT_ID
 
 > Frontend variables must start with `VITE_`.
 
