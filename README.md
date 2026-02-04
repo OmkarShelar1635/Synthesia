@@ -82,25 +82,25 @@ VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
 
 ---
 
-## ▶️ Run Locally
+## ▶ Run Locally
 
 ### Backend
 
-cd Backend
-npm install
-npm run dev
+cd Backend |
+npm install |
+npm run dev 
 
 ### Frontend
 
-cd Frontend
-npm install
-npm run dev
+cd Frontend |
+npm install |
+npm run dev 
 
-📌 Author
+## 📌 Author
 
 Omkar Shelar
 
-Full Stack Developer | MERN Stack | React | Node.js
+Full Stack Developer | MERN Stack 
 
 
 
