@@ -69,12 +69,12 @@ Synthesia/
 
 This project uses **two `.env` files** (not pushed to GitHub):
 
-Backend/.env
-JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
-MONGO_URI=YOUR_MONGODB_URL
+Backend/.env : 
+JAMENDO_CLIENT_ID=YOUR_CLIENT_ID,
+MONGO_URI=YOUR_MONGODB_URL,
 JWT_SECRET=YOUR_JWT_SECRET
 
-Frontend/.env
+Frontend/.env :
 VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
 
 
@@ -102,24 +102,6 @@ Omkar Shelar
 
 Full Stack Developer | MERN Stack | React | Node.js
 
-⭐ If you like this project
-
-Give it a star ⭐ on GitHub!
-
-
----
-
-### ✅ How to add it:
-
-1. Open `README.md` in your Synthesia folder  
-2. Replace content  
-3. Save  
-4. Run:
-
-```bash
-git add README.md
-git commit -m "Add Synthesia README"
-git push
 
 
 
