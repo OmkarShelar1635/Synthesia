@@ -70,12 +70,12 @@ Synthesia/
 This project uses **two `.env` files** (not pushed to GitHub):
 
 Backend/.env : 
-JAMENDO_CLIENT_ID=YOUR_CLIENT_ID,
-MONGO_URI=YOUR_MONGODB_URL,
-JWT_SECRET=YOUR_JWT_SECRET
+1. JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
+2. MONGO_URI=YOUR_MONGODB_URL
+3. JWT_SECRET=YOUR_JWT_SECRET
 
 Frontend/.env :
-VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
+1. VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
 
 
 > Frontend variables must start with `VITE_`.
@@ -86,21 +86,15 @@ VITE_JAMENDO_CLIENT_ID=YOUR_CLIENT_ID
 
 ### Backend
 
-cd Backend |
-npm install |
-npm run dev 
+1. cd Backend 
+2. npm install 
+3. npm run dev 
 
 ### Frontend
 
-cd Frontend |
-npm install |
-npm run dev 
-
-## 📌 Author
-
-Omkar Shelar
-
-Full Stack Developer | MERN Stack 
+1. cd Frontend 
+2. npm install 
+3. npm run dev 
 
 
 
