@@ -12,7 +12,7 @@ export default function Favourite() {
       {/* EMPTY STATE */}
       {favourites.length === 0 && (
         <div className="h-[55vh] flex items-center justify-center">
-          <div className="w-[520px] bg-slate-900/60 backdrop-blur rounded-xl p-10 text-center border border-slate-800">
+          <div className="w-[520px] bg-slate-900/60 backdrop-blur rounded-xl p-10 text-center border border-slate-800 ">
 
             <Heart size={32} className="mx-auto text-pink-400 mb-3" />
 
@@ -29,7 +29,7 @@ export default function Favourite() {
       {/* FAVOURITES TABLE */}
       {favourites.length > 0 && (
 
-        <div className="border border-slate-800 rounded-xl overflow-hidden flex flex-col max-h-[72vh]">
+        <div className="border border-slate-800 rounded-xl overflow-hidden flex flex-col max-h-[72vh] mt-16">
 
           {/* Headers */}
           <div className="grid grid-cols-[60px_3fr_2fr_1fr_100px] px-4 py-3 text-slate-400 text-sm bg-slate-900 border-b border-slate-800">

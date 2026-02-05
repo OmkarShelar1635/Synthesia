@@ -13,6 +13,7 @@ import {
 } from "lucide-react"
 import { AuthContext } from "../../context/AuthContext"
 import { addFavourite, removeFavourite } from "../../api/favourite"
+import toast from "react-hot-toast"
 
 
 export default function AudioPlayer() {
@@ -127,22 +128,29 @@ export default function AudioPlayer() {
 
                         <SkipForward size={18} onClick={next} className="cursor-pointer" />
 
-                        {/* ❤️ Favourite — only when logged in + song selected */}
+                        {/*  Favourite — only when logged in + song selected */}
                         {user && currentSong && (
                             <Heart
                                 size={18}
                                 onClick={async () => {
-                                    if (!isFav) {
-                                        await addFavourite(currentSong)
-                                        setFavourites([...favourites, currentSong])
-                                    } else {
-                                        await removeFavourite(currentSong.id)
-                                        setFavourites(favourites.filter(f => f.id !== currentSong.id))
+                                    try {
+                                        if (!isFav) {
+                                            await addFavourite(currentSong)
+                                            setFavourites([...favourites, currentSong])
+                                            toast.success("Added to favourites ❤️")
+                                        } else {
+                                            await removeFavourite(currentSong.id)
+                                            setFavourites(favourites.filter(f => f.id !== currentSong.id))
+                                            toast("Removed from favourites 💔", { icon: "🗑️" })
+                                        }
+                                    } catch {
+                                        toast.error("Something went wrong")
                                     }
+
                                 }}
                                 className={`cursor-pointer transition ${isFav
-                                        ? "text-pink-500 fill-pink-500"
-                                        : "text-slate-400 hover:text-pink-400"
+                                    ? "text-pink-500 fill-pink-500"
+                                    : "text-slate-400 hover:text-pink-400"
                                     }`}
                             />
                         )}
@@ -180,7 +188,7 @@ export default function AudioPlayer() {
                 </div>
 
                 {/* RIGHT */}
-                {/* RIGHT */}
+               
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-4">
 
 
